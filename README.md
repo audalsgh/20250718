@@ -11,7 +11,21 @@ YOLO의 Neck은 다양한 스케일의 특징 맵(feature maps)을 융합하여 
 YOLO의 Head는 객체의 위치, 클래스, 크기 등을 최종 예측하는 마지막 단.<br>
 <br>
 
-**YOLOv11이 YOLOv8을 개선한 차세대 모델이였다면, YOLOv12는 구조를 처음부터 새로 설계하여 기존의 YOLO계열과는 다르다.**
+<img width="890" height="718" alt="image" src="https://github.com/user-attachments/assets/2da0012d-67e3-4569-b81b-d22021da9d1a" /><br>
+threshold와 confidence의 차이점
+- Confidence (신뢰도)
+  - 모델이 출력하는 값 - 모델 자체가 계산한 확신의 정도
+  - 0~1 사이의 확률값 (예: 0.85 = 85% 확신)
+  - 모델의 내부 계산 결과물
+  - 각 예측마다 다른 값을 가짐
+
+- Threshold (임계값)
+  - 사람이 설정하는 기준점 - 의사결정을 위한 경계선
+  - 고정된 값 (예: 0.7로 설정)
+  - 비즈니스 요구사항에 따라 조정
+  - 모든 예측에 동일하게 적용
+
+**YOLOv11이 YOLOv8을 개선한 모델이였다면, YOLOv12는 구조를 처음부터 새로 설계하여 기존의 YOLO계열과는 아예 다르다.**
 
 YOLOv8:<br> 
   [ C2f → PAN → ConvHead ]<br>
@@ -84,6 +98,8 @@ DRepHead : 경량화된 head로 학습은 여러 Conv 레이러로 깊지만, �
 
 
 ## 추후예정 : Roboflow에 가입하고, YOLO 코드를 얻도록 전이학습까지 해보자
+[교수님의 Roboflow 필기 정리본](https://docs.google.com/document/d/1dX04LQyjvr5-s3gsnk4QqRllBLTgHZzXCGvCRgGFu7s/edit?usp=sharing)<br>
+
 https://www.youtube.com/watch?v=N8ZUm-26zyk<br>
 https://www.youtube.com/watch?v=0lyPAGcrDLU
 
