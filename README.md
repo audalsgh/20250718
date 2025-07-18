@@ -11,8 +11,7 @@ YOLO 아키텍처 구조 : (백본 -> NECK -> HEAD) 순서<br>
 3. YOLO의 Head는 객체의 위치, 클래스, 크기 등을 최종 예측하는 마지막 단.<br>
 <br>
 
-<img width="890" height="718" alt="image" src="https://github.com/user-attachments/assets/2da0012d-67e3-4569-b81b-d22021da9d1a" /><br>
-threshold와 confidence의 차이점
+**threshold와 confidence의 차이점**
 - Confidence (신뢰도)
   - 모델이 출력하는 값 - 모델 자체가 계산한 확신의 정도
   - 0~1 사이의 확률값 (예: 0.85 = 85% 확신)
@@ -24,6 +23,8 @@ threshold와 confidence의 차이점
   - 고정된 값 (예: 0.7로 설정)
   - 비즈니스 요구사항에 따라 조정
   - 모든 예측에 동일하게 적용
+    
+<img width="890" height="718" alt="image" src="https://github.com/user-attachments/assets/2da0012d-67e3-4569-b81b-d22021da9d1a" /><br>
 
 **YOLOv11이 YOLOv8을 개선한 모델이였다면, YOLOv12는 구조를 처음부터 새로 설계하여 기존의 YOLO계열과는 아예 다르다.**
 
