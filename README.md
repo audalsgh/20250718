@@ -72,11 +72,10 @@ DRepHead : 경량화된 head로 학습은 여러 Conv 레이러로 깊지만, �
 → 학습 로그, 튜토리얼, 전환 툴 등의 자료가 YOLOv8/11보다 부족함<br>
 
 ## 2. YOLOv11, YOLOv12 예제를 다시 테스트해보고, fps를 기록하여 두 모델을 비교하자
-<img width="1097" height="833" alt="image" src="https://github.com/user-attachments/assets/ca06bff1-78dc-4ddd-8646-e595779aaedf" /><br>
 - YOLOv11 fps 사진
-
-<img width="1101" height="767" alt="image" src="https://github.com/user-attachments/assets/eeac33b3-ba2a-4ffe-ae98-eb94b989dc4a" /><br>
+<img width="1097" height="833" alt="image" src="https://github.com/user-attachments/assets/ca06bff1-78dc-4ddd-8646-e595779aaedf" /><br>
 - YOLOv12 fps 사진
+<img width="1101" height="767" alt="image" src="https://github.com/user-attachments/assets/eeac33b3-ba2a-4ffe-ae98-eb94b989dc4a" /><br>
 
 <img width="2395" height="677" alt="image" src="https://github.com/user-attachments/assets/e1b81510-f264-434c-858f-bc91633f6f64" /><br>
 - 두 모델의 결과 영상 비교. 결정적으로 왼쪽 트럭을 검출해낸 YOLOv12가 정확도가 높다.
