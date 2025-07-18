@@ -1,6 +1,6 @@
 # 20일차
 
-## YOLOv11, YOLOv12 정리
+## 1. YOLOv11, YOLOv12 정리
 [Ultralytics YOLOv12 공식 문서](https://docs.ultralytics.com/ko/models/yolo12/)<br>
 YOLO 아키텍처 구조 : (백본 -> NECK -> HEAD) 순서<br>
 특징 추출 (Feature Extraction) -> 다중 스케일 특징 통합 (Feature Fusion) -> 예측 (Detection / Classification / Segmentation 등) 순서<br>
@@ -71,7 +71,19 @@ DRepHead : 경량화된 head로 학습은 여러 Conv 레이러로 깊지만, �
 ❌ 아직 생태계가 안정적이지 않음<br>
 → 학습 로그, 튜토리얼, 전환 툴 등의 자료가 YOLOv8/11보다 부족함<br>
 
-## Roboflow에 가입하고, YOLOv11 코드를 얻도록 전이학습까지 해보자
+## 2. YOLOv11, YOLOv12 예제를 다시 테스트해보고, fps를 기록하여 두 모델을 비교하자
+<img width="1097" height="833" alt="image" src="https://github.com/user-attachments/assets/ca06bff1-78dc-4ddd-8646-e595779aaedf" /><br>
+- YOLOv11 fps 사진
+
+<img width="1101" height="767" alt="image" src="https://github.com/user-attachments/assets/eeac33b3-ba2a-4ffe-ae98-eb94b989dc4a" /><br>
+- YOLOv12 fps 사진
+
+<img width="2395" height="677" alt="image" src="https://github.com/user-attachments/assets/e1b81510-f264-434c-858f-bc91633f6f64" /><br>
+- 두 모델의 결과 영상 비교. 결정적으로 왼쪽 트럭을 검출해낸 YOLOv12가 정확도가 높다.
+- 결과 영상을 토대로, 정확도는 YOLOv12가 높고 / 실행속도는 YOLOv11가 더 빠르다.
+
+
+## 추후예정 : Roboflow에 가입하고, YOLO 코드를 얻도록 전이학습까지 해보자
 https://www.youtube.com/watch?v=N8ZUm-26zyk<br>
 https://www.youtube.com/watch?v=0lyPAGcrDLU
 
