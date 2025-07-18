@@ -4,9 +4,12 @@
 [Ultralytics YOLOv12 공식 문서](https://docs.ultralytics.com/ko/models/yolo12/)<br>
 YOLO 아키텍처 구조 : (백본 -> NECK -> HEAD) 순서<br>
 특징 추출 (Feature Extraction) -> 다중 스케일 특징 통합 (Feature Fusion) -> 예측 (Detection / Classification / Segmentation 등) 순서<br>
-<br>
-YOLO의 Neck은 다양한 스케일의 특징 맵(feature maps)을 융합하여 작은/중간/큰 객체를 모두 감지할 수 있게 하는 YOLO모델의 앞단.<br>
-YOLO의 Head는 객체의 위치, 클래스, 크기 등을 최종 예측하는 단계<br>
+
+```
+YOLO의 Backbone은 이미지에서 기본 특징(edges, textures 등)을 추출하는 앞단.<br>
+YOLO의 Neck은 다양한 스케일의 특징 맵(feature maps)을 융합하여 작은/중간/큰 객체를 모두 감지할 수 있게 하는 중간단.<br>
+YOLO의 Head는 객체의 위치, 클래스, 크기 등을 최종 예측하는 마지막 단.<br>
+```
 
 **YOLOv11이 YOLOv8을 개선한 차세대 모델이였다면, YOLOv12는 구조를 처음부터 새로 설계하여 기존의 YOLO계열과는 다르다.**
 
