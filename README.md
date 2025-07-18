@@ -20,7 +20,7 @@ YOLOv11:<br>
 YOLOv12:<br>
   [ RepVGGBlock기반 SwiftNet → SwiftNeck → DRepHead ]
 
-YOLOv12
+**YOLOv12**
 - 가장 최신 모델로, 정확도와 속도가 제일 우수하다.
 - 백본 구조 : RepNCSPELAN4C -> RepVGGBlock기반 SwiftNet (효율적인 2D residual 구조 + MobileNet-style 경량화)
 - Neck 구조	: CBLinearNeck ->	SwiftNeck (PAN이 아닌 1x1 + 3x3 블록 기반, 속도 최적화)
@@ -44,7 +44,10 @@ RepConv (Reparameterized Conv) =	학습 시 더 깊은 구조, 추론 시 병합
 다중 anchor-free head = 단일뿐만 아니라 multi-head 설계 가능<br>
 
 ### YOLOv12 결론
+SwiftNet : 학습 시엔 여러 Conv + BN 레이어를 쌓아 깊지만, 추론 시엔 단일 Conv로 병합되도록 설계됨<br>
+> Rep 구조 → 추론 시 1 Conv로 단순화가 핵심 기술
 SwiftNeck : 기존 PAN/FPN 구조보다 더 빠르고 단순하게 특징 융합.(얕다)<br>
+> PAN 구조 제거 → 더 빠른 융합이 핵심 기술
 DRepHead : 경량화된 head로 학습은 깊지만, 추론은 빠르게 하는 구조.(추론시 병합)<br>
 -> YOLOv12 전체는 이 두 구조로 인해 모바일 환경에서도 높은 정확도와 속도를 동시에 달성. 기존보다 연산량 20~30% 감소
 
