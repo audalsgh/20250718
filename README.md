@@ -45,12 +45,14 @@ RepConv (Reparameterized Conv) =	학습 시 더 깊은 구조, 추론 시 병합
 
 ### YOLOv12 결론
 SwiftNet : 학습 시엔 여러 Conv + BN 레이어를 쌓아 깊지만, 추론 시엔 단일 Conv로 병합되도록 설계됨<br>
-> Rep 구조 → 추론 시 1 Conv로 단순화가 핵심 기술
+> Rep 구조 → 추론 시 단일 Conv로 단순화가 핵심 기술
  
 SwiftNeck : 기존 PAN/FPN 구조보다 더 빠르고 단순하게 특징 융합.(얕다)<br>
 > PAN 구조 제거 → 더 빠른 융합이 핵심 기술
 
-DRepHead : 경량화된 head로 학습은 깊지만, 추론은 빠르게 하는 구조.(추론시 병합)<br>
+DRepHead : 경량화된 head로 학습은 여러 Conv 레이러로 깊지만, 추론때엔 단일 Conv로 병합되었기에 빠름.(추론시 병합)<br>
+> Depthwise Separable Convolution (DWConv) : 일반 Conv 대비 연산량(FLOPs)을 대폭 줄이는 핵심 기술, (Channel 간 독립적 연산을 수행하여 경량화 실현)
+ 
 -> YOLOv12 전체는 이 두 구조로 인해 모바일 환경에서도 높은 정확도와 속도를 동시에 달성. 기존보다 연산량 20~30% 감소
 
 <img width="818" height="620" alt="image" src="https://github.com/user-attachments/assets/2f2d2699-24f3-4846-8737-5e360f2d3357" />
