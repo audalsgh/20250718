@@ -28,14 +28,38 @@ YOLOv12
 같은 정확도 기준 모델 사이즈는 YOLOv11의 (3~70M)보다도 작아짐<br>
 더 빠르고, 적은 파라미터로 높은 표현력 확보<br>
 3. SwiftNeck neck<br>
-layer수가 적어서 단순하고 얕은 구조
-PANet처럼 복잡한 비대칭 경로는 제거됨
-연산량(FLOPs) 감소
-실시간 Edge 디바이스에서 10~15% 속도 향상
-메모리 사용량 감소
-5. DRepHead Head
+layer수가 적어서 단순하고 얕은 구조<br>
+PANet처럼 복잡한 비대칭 경로는 제거됨<br>
+연산량(FLOPs) 감소<br>
+실시간 Edge 디바이스에서 10~15% 속도 향상<br>
+메모리 사용량 감소<br>
+3. DRepHead Head<br>
+파라미터 수와 메모리 사용을 모두 감소시킨 경령화 Head<br>
+Depthwise Separable Conv = MobileNet 스타일의 연산량 최소화<br>
+RepConv (Reparameterized Conv) =	학습 시 더 깊은 구조, 추론 시 병합하여 빠르게<br>
+(Conv + BN + ReLU) → RepConv로 통합 = fused 모델 구성으로 추론 최적화<br>
+다중 anchor-free head = 단일뿐만 아니라 multi-head 설계 가능<br>
+
+**YOLOv12 결론**<br>
+SwiftNeck : 기존 PAN/FPN 구조보다 더 빠르고 단순하게 특징 융합.(얕다)<br>
+DRepHead : 경량화된 head로 학습은 깊지만, 추론은 빠르게 하는 구조.(추론시 병합)<br>
+-> YOLOv12 전체는 이 두 구조로 인해 모바일 환경에서도 높은 정확도와 속도를 동시에 달성. 기존보다 연산량 20~30% 감소
 
 <img width="818" height="620" alt="image" src="https://github.com/user-attachments/assets/2f2d2699-24f3-4846-8737-5e360f2d3357" />
+
+| 모델 종류         | 설명                                    |
+| ------------- | ------------------------------------- |
+| `yolov12n.pt` | **Nano**: 가장 작고 빠름. 모바일 및 임베디드 환경에 최적 |
+| `yolov12s.pt` | **Small**: 가볍고 정확도도 준수. 실시간 웹캠/드론에 적합 |
+| `yolov12m.pt` | **Medium**: 속도와 정확도의 균형. 대부분 상황에서 추천  |
+| `yolov12l.pt` | **Large**: 높은 정확도. 고해상도 객체 인식에 적합     |
+| `yolov12x.pt` | **X-Large**: 최고 성능. 정확도 우선 환경에 적합     |
+
+단점<br>
+❌ YOLOv8 / YOLOv11과도 구조적으로 호환되지 않음<br>
+→ SwiftNet, SwiftNeck, DRepHead 등 새로운 구조 기반이기 때문에 기존 .yaml이나 커스텀 코드 재활용이 어려움<br>
+❌ 아직 생태계가 안정적이지 않음<br>
+→ 학습 로그, 튜토리얼, 전환 툴 등의 자료가 YOLOv8/11보다 부족함<br>
 
 ## Roboflow에 가입하고, YOLOv11 코드를 얻도록 전이학습까지 해보자
 https://www.youtube.com/watch?v=N8ZUm-26zyk<br>
