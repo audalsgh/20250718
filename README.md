@@ -78,8 +78,9 @@ DRepHead : 경량화된 head로 학습은 여러 Conv 레이러로 깊지만, �
 <img width="1101" height="767" alt="image" src="https://github.com/user-attachments/assets/eeac33b3-ba2a-4ffe-ae98-eb94b989dc4a" /><br>
 
 <img width="2395" height="677" alt="image" src="https://github.com/user-attachments/assets/e1b81510-f264-434c-858f-bc91633f6f64" /><br>
-- 두 모델의 결과 영상 비교. 결정적으로 왼쪽 트럭을 검출해낸 YOLOv12가 정확도가 높다.
-- 결과 영상을 토대로, 정확도는 YOLOv12가 높고 / 실행속도는 YOLOv11가 더 빠르다.
+- 두 모델의 결과 영상 비교. 결정적으로 왼쪽 트럭을 검출해낸 YOLOv12가 정확도가 높다.<br>
+
+**->결과 영상을 토대로, 정확도는 YOLOv12가 높고 / fps와 실행속도는 YOLOv11가 약 1.5fps, 4초 더 빠르다.**
 
 
 ## 추후예정 : Roboflow에 가입하고, YOLO 코드를 얻도록 전이학습까지 해보자
