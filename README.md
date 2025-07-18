@@ -6,9 +6,9 @@ YOLO 아키텍처 구조 : (백본 -> NECK -> HEAD) 순서<br>
 특징 추출 (Feature Extraction) -> 다중 스케일 특징 통합 (Feature Fusion) -> 예측 (Detection / Classification / Segmentation 등) 순서<br>
 
 <br>
-1. YOLO의 Backbone은 이미지에서 기본 특징(edges, textures 등)을 추출하는 앞단.
-2. YOLO의 Neck은 다양한 스케일의 특징 맵(feature maps)을 융합하여 작은/중간/큰 객체를 모두 감지할 수 있게 하는 중간단.
-3. YOLO의 Head는 객체의 위치, 클래스, 크기 등을 최종 예측하는 마지막 단.
+1. YOLO의 Backbone은 이미지에서 기본 특징(edges, textures 등)을 추출하는 앞단.<br>
+2. YOLO의 Neck은 다양한 스케일의 특징 맵(feature maps)을 융합하여 작은/중간/큰 객체를 모두 감지할 수 있게 하는 중간단.<br>
+3. YOLO의 Head는 객체의 위치, 클래스, 크기 등을 최종 예측하는 마지막 단.<br>
 <br>
 
 <img width="890" height="718" alt="image" src="https://github.com/user-attachments/assets/2da0012d-67e3-4569-b81b-d22021da9d1a" /><br>
