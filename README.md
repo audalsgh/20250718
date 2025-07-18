@@ -102,6 +102,10 @@ DRepHead : 경량화된 head로 학습은 여러 Conv 레이러로 깊지만, �
 [교수님의 Roboflow 필기 정리본](https://docs.google.com/document/d/1dX04LQyjvr5-s3gsnk4QqRllBLTgHZzXCGvCRgGFu7s/edit?usp=sharing)<br>
 
 https://www.youtube.com/watch?v=N8ZUm-26zyk<br>
-https://www.youtube.com/watch?v=0lyPAGcrDLU
+https://www.youtube.com/watch?v=0lyPAGcrDLU<br>
+두 링크를 참고하거나, 교수님의 블로그를 참고하여 최소 500장 이상 라벨링하기<br>
 
-두 링크를 참고하거나, 교수님의 블로그를 참고하여 최소 500장 이상 라벨링하기
+universe에서 다른사람들이 올린 클래스들을 다운받을수 있다.
+<img width="2506" height="738" alt="image" src="https://github.com/user-attachments/assets/c71be9b8-8861-4d2d-b57c-7ce060aa9fd6" /><br>
+<img width="2120" height="962" alt="image" src="https://github.com/user-attachments/assets/470c7910-bb5d-482e-a5be-09ac15c02eec" /><br>
+여기서 하나하나 클래스를 추가해 나갈것.
