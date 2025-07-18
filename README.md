@@ -14,11 +14,11 @@ YOLO의 Head는 객체의 위치, 클래스, 크기 등을 최종 예측하는 �
 **YOLOv11이 YOLOv8을 개선한 차세대 모델이였다면, YOLOv12는 구조를 처음부터 새로 설계하여 기존의 YOLO계열과는 다르다.**
 
 YOLOv8:<br> 
-[ C2f → PAN → ConvHead ]<br>
+  [ C2f → PAN → ConvHead ]<br>
 YOLOv11:<br>
-[ RepNCSPELAN4C → CBLinearNeck → DConvHead ]<br>
+  [ RepNCSPELAN4C → CBLinearNeck → DConvHead ]<br>
 YOLOv12:<br>
-[ RepVGGBlock기반 SwiftNet → SwiftNeck → DRepHead ]
+  [ RepVGGBlock기반 SwiftNet → SwiftNeck → DRepHead ]
 
 YOLOv12
 - 가장 최신 모델로, 정확도와 속도가 제일 우수하다.
