@@ -40,7 +40,7 @@ RepConv (Reparameterized Conv) =	학습 시 더 깊은 구조, 추론 시 병합
 (Conv + BN + ReLU) → RepConv로 통합 = fused 모델 구성으로 추론 최적화<br>
 다중 anchor-free head = 단일뿐만 아니라 multi-head 설계 가능<br>
 
-**YOLOv12 결론**<br>
+### YOLOv12 결론
 SwiftNeck : 기존 PAN/FPN 구조보다 더 빠르고 단순하게 특징 융합.(얕다)<br>
 DRepHead : 경량화된 head로 학습은 깊지만, 추론은 빠르게 하는 구조.(추론시 병합)<br>
 -> YOLOv12 전체는 이 두 구조로 인해 모바일 환경에서도 높은 정확도와 속도를 동시에 달성. 기존보다 연산량 20~30% 감소
